@@ -34,8 +34,7 @@ class Config:
         # Data dirs
         if using_hpc:
             # HPC data dirs
-            self.data_dirs_path = '/rds/general/user/xh519/home/HRTF-upsampling-with-a-generative-' \
-                                  'adversarial-network-using-a-gnomonic-equiangular-projection'
+            self.data_dirs_path = '/rds/general/user/xh519/home/HRTF-Project'
             self.raw_hrtf_dir = Path('/rds/general/project/sonicom/live/HRTF Datasets')
             self.amt_dir = '/rds/general/user/xh519/home/HRTF-GANs-27Sep22-prep-for-publication/thirdParty'
         else:

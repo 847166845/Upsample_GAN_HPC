@@ -8,7 +8,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
 
-path = "C:/PycharmProjects/Upsample_GAN/ESRGAN_master/models/model"
+path = "/rds/general/user/jl2622/home/Upsample_GAN/ESRGAN_master/models/model"
 GPU = True # Choose whether to use GPU
 if GPU:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -17,7 +17,7 @@ else:
 print(f'Using {device}')
 import os
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
-config = Config("ari-upscale-4", using_hpc=False)
+config = Config("ari-upscale-4", using_hpc=True)
 data_dir = config.raw_hrtf_dir / config.dataset
 imp = importlib.import_module('hrtfdata.full')
 load_function = getattr(imp, config.dataset)
